@@ -2,8 +2,8 @@ import boto
 import boto.s3
 from boto.s3.key import Key
 
-KEY_ID = 'AKIAJ73OFBSSBSFIJRWQ'
-ACCESS_KEY = 'CgtsMkP6r85mXrwUVIEMR7wSZkgJtt0R9nIX0Vtr'
+KEY_ID = ''
+ACCESS_KEY = ''
 
 s3_connection = boto.connect_s3(KEY_ID,ACCESS_KEY)
 
