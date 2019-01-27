@@ -10,6 +10,16 @@ EC2_KEY_HANDLE = "" #Your key pair filename
 INSTANCE_TYPE = "t2.micro"
 SECGROUP_HANDLE = "default"
 
+#Use this Script or run script.py
+user_data_script = """#!/bin/bash
+sudo yum install update
+sudo yum install -y httpd
+sudo /usr/sbin/apachectl start
+sudo easy_install awscli
+sudo echo "[default]\naws_access_key_id = KEY_ID\naws_secret_access_key = ACCESS_KEY" >> ~/.aws/credentials
+sudo aws s3 cp s3://webdevelopingonaws ./files/ --recursive
+"""
+
 print "Connecting to EC2"
 
 conn = boto.ec2.connect_to_region(REGION, aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key)
