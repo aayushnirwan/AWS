@@ -1,12 +1,12 @@
 import boto.ec2
 from time import sleep
 
-access_key_id = "AKIAJVE62YUOMMKEM3EA"
-secret_access_key = "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"
+access_key_id = ""
+secret_access_key = ""
 
 REGION = "us-east-1"
 AMI_ID = "ami-4fffc834"
-EC2_KEY_HANDLE = "new_key_pair"
+EC2_KEY_HANDLE = "" #Your key pair filename
 INSTANCE_TYPE = "t2.micro"
 SECGROUP_HANDLE = "default"
 
